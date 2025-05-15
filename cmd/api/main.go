@@ -73,7 +73,7 @@ func main() {
 }
 
 func New(log *jsonlog.Logger, grpcPort int, tokenTTL time.Duration) *Application {
-	stripeKey := "pk_test_51ROwIlPrG4gDd5Y8sTCaS7UvhyxWBLA2QimX7Smc1JFpzoVZo6XjIwveEHy0gBAqhBGuDWdQMBryEmRjQLofrQkU00zR3z1Y84"
+	stripeKey := "key"
 	subscriptionService := payment.New(log, tokenTTL, stripeKey)
 	grpcApp := grpcapp.New(log, grpcPort, subscriptionService) // добавить сервис
 
